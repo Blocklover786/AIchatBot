@@ -88,44 +88,154 @@
             }
         }
     
-        /* Mobile-specific styles */
-        @media (max-width: 600px) {
-            .assistant-panel {
-                width: 100vw;
-                height: 100vh;
-                bottom: 0;
-                right: 0;
-                border-radius: 0;
-            }
-            
-            #assistant-toggle {
-                width: 55px;
-                height: 55px;
-                font-size: 22px;
-            }
-        }
-    
-        /* Small mobile devices */
-        @media (max-width: 400px) {
-            .panel-header {
-                padding: 12px 15px;
-            }
-            
-            .message {
-                max-width: 90%;
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-            
-            .input-container {
-                padding: 8px 12px;
-            }
-            
-            #text-input {
-                font-size: 14px;
-            }
-        }
-    
+       /* Mobile-specific styles for screens up to 600px */
+@media (max-width: 600px) {
+    .assistant-panel {
+        width: 100vw; /* Full width on smaller screens */
+        height: 100vh; /* Full height to utilize the space */
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        padding: 0 10px; /* Added padding on left and right */
+    }
+
+    #assistant-toggle {
+        width: 50px; /* Smaller toggle button */
+        height: 50px;
+        font-size: 20px; /* Smaller font size */
+    }
+
+    .panel-header {
+        padding: 8px 12px; /* Smaller padding for header */
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .chat-display {
+        padding: 12px;
+        font-size: 14px; /* Smaller font for chat */
+    }
+
+    .message {
+        padding: 6px 10px; /* Reduced padding for message */
+        font-size: 12px; /* Reduced font size */
+        max-width: 85%; /* Messages take up most of the screen */
+    }
+
+    .user-message, .ai-message {
+        font-size: 12px;
+    }
+
+    .input-area {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-container {
+        padding: 6px 10px; /* Reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    #text-input {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    #send-btn {
+        width: 28px; /* Smaller send button */
+        height: 28px;
+        font-size: 14px; /* Reduced font size */
+    }
+
+    .mode-selector {
+        padding: 6px 8px;
+        margin-top: 8px;
+    }
+
+    .mode-option {
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+
+    .avatar-container {
+        width: 60px;
+        height: 60px;
+        margin: 8px auto;
+    }
+}
+
+/* Very small mobile devices (screens up to 400px) */
+@media (max-width: 400px) {
+    /* Adjust the assistant panel for very small screens */
+    .assistant-panel {
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        padding: 0 8px; /* Slight padding on the left and right */
+    }
+
+    #assistant-toggle {
+        width: 45px; /* Smaller button for very small screens */
+        height: 45px;
+        font-size: 18px; /* Even smaller font size */
+    }
+
+    .panel-header {
+        padding: 6px 10px; /* Reduced header padding */
+        font-size: 14px; /* Smaller header text */
+    }
+
+    .chat-display {
+        padding: 8px; /* Less padding for chat display */
+        font-size: 12px; /* Smaller font size for chat messages */
+    }
+
+    .message {
+        padding: 6px 8px; /* Smaller padding for messages */
+        font-size: 10px; /* Much smaller font size */
+        max-width: 90%; /* Messages take up most of the screen */
+    }
+
+    .user-message, .ai-message {
+        font-size: 10px; /* Smaller font size for messages */
+    }
+
+    .input-area {
+        padding: 8px;
+        font-size: 12px; /* Smaller font size for input */
+    }
+
+    .input-container {
+        padding: 4px 8px; /* Even smaller padding for the input field */
+        font-size: 12px;
+    }
+
+    #text-input {
+        font-size: 12px;
+        padding: 6px 8px; /* Smaller padding for input */
+    }
+
+    #send-btn {
+        width: 25px; /* Even smaller send button */
+        height: 25px;
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .mode-selector {
+        padding: 4px 6px;
+        margin-top: 6px; /* Reduced margin */
+    }
+
+    .mode-option {
+        padding: 3px 5px;
+        font-size: 10px; /* Smaller font size for mode options */
+    }
+
+    .avatar-container {
+        width: 50px; /* Smaller avatar size */
+        height: 50px;
+        margin: 6px auto; /* Reduced margin */
+    }
+}
+
         .assistant-panel.active {
             display: flex;
             transform: translateY(0);
